@@ -11,7 +11,7 @@ const TitleText = ({ text }: TitleTextProps): JSX.Element => {
       sx={{
         width: "auto",
         height: "auto",
-        fontSize: "45px",
+        fontSize: "70px",
         fontWeight: "bold",
         textAlign: "center",
       }}

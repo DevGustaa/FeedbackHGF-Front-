@@ -6,7 +6,7 @@ const MyRadio = (props: any): JSX.Element => {
     <Radio
       {...props}
       sx={{
-        "& .MuiSvgIcon-root": { fontSize: 35 },
+        "& .MuiSvgIcon-root": { fontSize: 46 },
       }}
     />
   );

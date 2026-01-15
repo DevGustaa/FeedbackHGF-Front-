@@ -22,7 +22,7 @@ const Header = (): JSX.Element => {
         sx={{
           height: "auto",
           color: "white",
-          fontSize: "35px",
+          fontSize: "50px",
           fontWeight: "bold",
           textAlign: "center",
         }}
@@ -31,7 +31,7 @@ const Header = (): JSX.Element => {
       </Typography>
       <Box
         sx={{
-          width: "30%",
+          width: "35%",
           height: "80%",
           backgroundColor: "white",
           borderRadius: "10px",

@@ -15,26 +15,25 @@ const Start = (): JSX.Element => {
         height: "100%",
       }}
     >
-      <Box sx={{ display: "flex", height: "80%", width: "100%" }}>
+      <Box
+        sx={{
+          display: "flex",
+          height: "100%",
+          width: "100%",
+          gap: "50px",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <img src={start} style={{ width: "450px", height: "450px" }} />
+
         <Box
           sx={{
-            width: "50%",
-            height: "100%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <img src={start} style={{ width: "450px", height: "450px" }} />
-        </Box>
-        <Box
-          sx={{
-            width: "50%",
+            width: "auto",
             height: "100%",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            paddingRight: "30px",
             alignItems: "center",
           }}
         >
@@ -48,6 +47,7 @@ const Start = (): JSX.Element => {
           display: "flex",
           alignItems: " center",
           justifyContent: "center",
+          height: "30%",
         }}
       >
         <NavButton text="Iniciar pesquisa" link="/pesquisa" />

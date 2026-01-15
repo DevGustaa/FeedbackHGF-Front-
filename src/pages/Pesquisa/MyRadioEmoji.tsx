@@ -14,6 +14,7 @@ const MyRadioEmoji = ({ emoji, ...props }: MyRadioEmojiProps): JSX.Element => {
           role="img"
           aria-label="emoji"
           style={{
+            width: "20px",
             fontSize: 40,
             display: "flex",
             justifyContent: "center",
@@ -28,10 +29,14 @@ const MyRadioEmoji = ({ emoji, ...props }: MyRadioEmojiProps): JSX.Element => {
           role="img"
           aria-label="emoji"
           style={{
+            width: "60px",
+            height: "60px",
             fontSize: 40,
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            border: "2px solid #00776bff",
+            borderRadius: "100%",
           }}
         >
           {emoji}

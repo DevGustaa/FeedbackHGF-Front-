@@ -13,7 +13,7 @@ const Pesquisa = (): JSX.Element => {
   const explicacao = (
     <p>
       <b>Avaliação Geral:</b> Em uma escala de 0 à 10, o quanto você indicaria o
-      <b>Hospital Geral de Fortaleza</b> a um amigo ou familiar?
+      <b> Hospital Geral de Fortaleza</b> a um amigo ou familiar?
     </p>
   );
 
@@ -24,14 +24,13 @@ const Pesquisa = (): JSX.Element => {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        padding: "5px",
         width: "100%",
+        gap: "5px",
         height: "100%",
-        gap: "10px",
       }}
     >
       <Box sx={{ width: "80%", height: "auto" }}>
-        <Text text={explicacao} />
+        <Text sizing text={explicacao} />
         <RadioRating />
       </Box>
       <Box
@@ -39,8 +38,9 @@ const Pesquisa = (): JSX.Element => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          width: "100%",
           flexDirection: "column",
-          gap: "10px",
+          gap: "15px",
         }}
       >
         <VoteRating
@@ -49,7 +49,7 @@ const Pesquisa = (): JSX.Element => {
           image={AtendimentoPng}
         />
         <VoteRating
-          text="Profissional / Responsável pelo atendimento / consulta"
+          text="Responsável pelo atendimento / consulta"
           alt="Imagem de profissinal"
           image={RecepcaoPng}
         />
@@ -63,17 +63,17 @@ const Pesquisa = (): JSX.Element => {
           alt="Imagem de um relógio"
           image={TempoEsperaPng}
         />
-        <Box
-          sx={{
-            width: "100%",
-            height: "100%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <NavButton text="Enviar Pesquisa" link="/agradecimento" />
-        </Box>
+      </Box>
+      <Box
+        sx={{
+          width: "100%",
+          height: "20%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <NavButton text="Enviar Pesquisa" link="/agradecimento" />
       </Box>
     </Box>
   );

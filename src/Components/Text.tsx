@@ -3,15 +3,16 @@ import { Typography } from "@mui/material";
 
 type TextProps = {
   text: string | JSX.Element;
+  sizing?: boolean;
 };
 
-const Text = ({ text }: TextProps): JSX.Element => {
+const Text = ({ text, sizing }: TextProps): JSX.Element => {
   return (
     <Typography
       sx={{
         width: "auto",
         height: "auto",
-        fontSize: "24px",
+        fontSize: sizing ? "35px" : "28px",
         textAlign: "center",
       }}
     >

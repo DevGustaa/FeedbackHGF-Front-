@@ -13,8 +13,8 @@ const VoteRating = ({ text, image, alt }: VoteRatingProps): JSX.Element => {
     <Box
       sx={{
         width: "85%",
-        height: "17%",
-        backgroundColor: "#E8E8E8",
+        height: "21%",
+        backgroundColor: "#d9d9d9ff",
         borderRadius: "22px",
         display: "flex",
         justifyContent: "center",
@@ -45,7 +45,7 @@ const VoteRating = ({ text, image, alt }: VoteRatingProps): JSX.Element => {
             sx={{
               width: "auto",
               height: "auto",
-              fontSize: "14px",
+              fontSize: "24px",
               fontWeight: "bold",
               textWrap: "wrap",
               textAlign: "center",
@@ -55,7 +55,7 @@ const VoteRating = ({ text, image, alt }: VoteRatingProps): JSX.Element => {
           </Typography>
         </Box>
       </Box>
-      <FormControl sx={{ width: "65%" }}>
+      <FormControl sx={{ width: "65%", height: "auto" }}>
         <RadioGroup
           row
           sx={{
@@ -63,8 +63,8 @@ const VoteRating = ({ text, image, alt }: VoteRatingProps): JSX.Element => {
             flexDirection: "row",
             flexWrap: "nowrap",
             alignItems: "center",
+            justifyContent: "center",
             height: "100%",
-            gap: "5%",
             "& .MuiFormControlLabel-label": { fontSize: 20 },
           }}
           name="radio-buttons-group"

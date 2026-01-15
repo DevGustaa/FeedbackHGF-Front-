@@ -22,7 +22,7 @@ const MyFormControl = ({ value, label }: MyFormControlProps): JSX.Element => {
         margin: 0,
         gap: "4px",
         "& .MuiFormControlLabel-label": {
-          fontSize: 20,
+          fontSize: 26,
           fontWeight: "bold",
           textAlign: "center",
         },

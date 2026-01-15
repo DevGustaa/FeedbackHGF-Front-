@@ -12,12 +12,12 @@ createRoot(document.getElementById("root")!).render(
       sx={{
         backgroundColor: "#C9E0DC",
         boxSizing: "border-box",
-        padding: "18px",
+        padding: "10px",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "flex-start",
-        height: "100%",
+        height: "100dvh",
         width: "100%",
         gap: "10px",
       }}
