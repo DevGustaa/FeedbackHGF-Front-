@@ -5,18 +5,23 @@ import { useNavigate } from "react-router-dom";
 
 type NavButtonProps = {
   text: string;
-  link: string;
+  link?: string;
+  onClick?: () => void | Promise<void>;
 };
 
-const NavButton = ({ text, link }: NavButtonProps): JSX.Element => {
+const NavButton = ({ text, link, onClick }: NavButtonProps): JSX.Element => {
   const navigate = useNavigate();
-  const NavPesquisa = useCallback(() => {
-    navigate(link);
-  }, [link, navigate]);
+  const handleClick = useCallback(() => {
+    if (onClick) {
+      onClick();
+    } else if (link) {
+      navigate(link);
+    }
+  }, [link, navigate, onclick]);
 
   return (
     <Button
-      onClick={NavPesquisa}
+      onClick={handleClick}
       sx={{
         width: "300px",
         height: "60px",

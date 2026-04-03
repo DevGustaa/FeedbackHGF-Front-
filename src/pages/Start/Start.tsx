@@ -4,8 +4,12 @@ import start from "../../assets/images/Start.png";
 import TitleText from "../../Components/TitleText";
 import Text from "../../Components/Text";
 import NavButton from "../../Components/NavButton";
+import { useSearchParams } from "react-router-dom";
 
 const Start = (): JSX.Element => {
+  const [searchParams] = useSearchParams();
+  const setorParam = searchParams.get("setor") ?? "";
+
   return (
     <Box
       sx={{
@@ -50,7 +54,10 @@ const Start = (): JSX.Element => {
           height: "30%",
         }}
       >
-        <NavButton text="Iniciar pesquisa" link="/pesquisa" />
+        <NavButton
+          text="Iniciar pesquisa"
+          link={`/pesquisa?setor=${setorParam}`}
+        />
       </Box>
     </Box>
   );

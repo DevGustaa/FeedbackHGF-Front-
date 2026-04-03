@@ -3,16 +3,21 @@ import { Box } from "@mui/material";
 import FeedbackImg from "../../assets/images/Agradecimento.png";
 import TitleText from "../../Components/TitleText";
 import Text from "../../Components/Text";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { useEffect } from "react";
+
 const Thanks = (): JSX.Element => {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const setorParam = searchParams.get("setor") ?? "";
 
   useEffect(() => {
     const time = setTimeout(() => {
-      navigate("/");
+      navigate(`/?setor=${setorParam}`);
     }, 5000);
-  }, [navigate]);
+
+    return () => clearTimeout(time);
+  }, [navigate, setorParam]);
 
   return (
     <Box

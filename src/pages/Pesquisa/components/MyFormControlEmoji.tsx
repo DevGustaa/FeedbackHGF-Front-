@@ -24,11 +24,22 @@ const MyFormControlEmoji = ({
         flex: "1",
         width: "5px",
         flexDirection: "column",
-        alignItems: "center",
+
+        // Wrapper do control (radio)
+        "& .MuiFormControlLabel-labelPlacementBottom": {
+          marginLeft: 0,
+        },
+
         "& .MuiFormControlLabel-label": {
           fontSize: 20,
           fontWeight: "bold",
           textAlign: "center",
+        },
+
+        // Centraliza o MyRadioEmoji
+        "& .MuiRadio-root, & .MuiButtonBase-root": {
+          margin: 0,
+          padding: 0,
         },
       }}
     />

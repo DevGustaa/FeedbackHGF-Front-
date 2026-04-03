@@ -22,7 +22,7 @@ const Header = (): JSX.Element => {
         sx={{
           height: "auto",
           color: "white",
-          fontSize: "50px",
+          fontSize: "40px",
           fontWeight: "bold",
           textAlign: "center",
         }}
@@ -31,13 +31,25 @@ const Header = (): JSX.Element => {
       </Typography>
       <Box
         sx={{
-          width: "35%",
+          width: "auto",
           height: "80%",
           backgroundColor: "white",
           borderRadius: "10px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          padding: "5px",
         }}
       >
-        <img src={LogoHgf} alt="Logo do HGF" />
+        <img
+          src={LogoHgf}
+          alt="Logo do HGF"
+          style={{
+            height: "100%",
+            width: "auto",
+            objectFit: "contain",
+          }}
+        />
       </Box>
     </Box>
   );

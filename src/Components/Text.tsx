@@ -3,17 +3,18 @@ import { Typography } from "@mui/material";
 
 type TextProps = {
   text: string | JSX.Element;
-  sizing?: boolean;
+  erro?: boolean;
 };
 
-const Text = ({ text, sizing }: TextProps): JSX.Element => {
+const Text = ({ text, erro }: TextProps): JSX.Element => {
   return (
     <Typography
       sx={{
         width: "auto",
         height: "auto",
-        fontSize: sizing ? "35px" : "28px",
+        fontSize: "28px",
         textAlign: "center",
+        color: erro ? "#ce7c00" : "inherit",
       }}
     >
       {text}

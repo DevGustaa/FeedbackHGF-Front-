@@ -6,21 +6,23 @@ type MyRadioEmojiProps = RadioProps & {
 };
 
 const MyRadioEmoji = ({ emoji, ...props }: MyRadioEmojiProps): JSX.Element => {
+  const emojiStyle = {
+    width: "45px",
+    height: "45px",
+    fontSize: 28,
+    lineHeight: 1,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    boxSizing: "border-box" as const,
+  };
+
   return (
     <Radio
       {...props}
+      disableRipple
       icon={
-        <span
-          role="img"
-          aria-label="emoji"
-          style={{
-            width: "20px",
-            fontSize: 40,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
+        <span role="img" aria-label="emoji" style={emojiStyle}>
           {emoji}
         </span>
       }
@@ -29,23 +31,20 @@ const MyRadioEmoji = ({ emoji, ...props }: MyRadioEmojiProps): JSX.Element => {
           role="img"
           aria-label="emoji"
           style={{
-            width: "60px",
-            height: "60px",
-            fontSize: 40,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            border: "2px solid #00776bff",
-            borderRadius: "100%",
+            ...emojiStyle,
+            border: "3px solid #00776bff",
+            borderRadius: "50%",
           }}
         >
           {emoji}
         </span>
       }
       sx={{
+        padding: 0,
+        margin: 0,
         "& .MuiSvgIcon-root": { fontSize: 40 },
       }}
-    ></Radio>
+    />
   );
 };
 
